@@ -9,7 +9,7 @@ import Foundation
 
 final class DataStore {
     
-    static let shared = DataStore()
+    static let contactSource = DataStore()
         
     let names = [
         "Ben",
@@ -66,4 +66,22 @@ final class DataStore {
    
     
     private init() {}
+    
+    func getContactList() -> [ContactInformation] {
+        
+           let count = min(names.count, surnames.count, phones.count, emails.count)
+           
+           let indices = Array(0..<count).shuffled()
+           
+           let contactInformation = indices.map { i in
+               ContactInformation(
+                   name: names[i],
+                   surname: surnames[i],
+                   email: emails[i],
+                   phoneNumber: phones[i]
+               )
+           }
+           
+           return contactInformation
+       }
 }
