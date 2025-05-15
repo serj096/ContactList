@@ -67,14 +67,14 @@ final class DataStore {
     
     private init() {}
     
-    func getContactList() -> [ContactInformation] {
+    func getContactList() -> [Person] {
         
            let count = min(names.count, surnames.count, phones.count, emails.count)
            
            let indices = Array(0..<count).shuffled()
            
            let contactInformation = indices.map { i in
-               ContactInformation(
+               Person(
                    name: names[i],
                    surname: surnames[i],
                    email: emails[i],

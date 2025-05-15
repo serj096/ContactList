@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ContactInformation {
+struct Person {
     
     let name: String
     let surname: String
