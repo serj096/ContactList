@@ -15,7 +15,7 @@ class ContactInformationViewController: UIViewController {
     
     var contactInformation: ContactInformation!
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
