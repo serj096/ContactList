@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ContactInformationViewController: UIViewController {
+final class ContactInformationViewController: UIViewController {
     
     @IBOutlet weak var phoneLabel: UILabel!
     
