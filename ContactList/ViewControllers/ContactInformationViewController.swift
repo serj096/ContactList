@@ -13,14 +13,14 @@ class ContactInformationViewController: UIViewController {
     
     @IBOutlet weak var emailLabel: UILabel!
     
-    var contactInformation: ContactInformation!
+    var person: Person!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = contactInformation.fullName
-        phoneLabel.text = "Phone: \(contactInformation.phoneNumber)"
-        emailLabel.text = "Email: \(contactInformation.email)"
+        title = person.fullName
+        phoneLabel.text = "Phone: \(person.phoneNumber)"
+        emailLabel.text = "Email: \(person.email)"
     }
 }
